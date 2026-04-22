@@ -1,15 +1,19 @@
-import { Text, View } from "react-native";
+import { ScrollView, Text } from "react-native";
+
+// Components
+import HomeHeader from "@/components/HomeHeader";
 
 // Global styles
 import { globalStyles } from "@/styles/global";
+import { Link } from "expo-router";
 
 export default function Index() {
-  const today = new Date();
-
   return (
-    <View style={globalStyles.container}>
+    <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>MacroZone</Text>
-      <Text style={globalStyles.sectionTitle}>{today.toLocaleString()}</Text>
-    </View>
+      <HomeHeader />
+
+      <Link href="/meals">Go to meals</Link>
+    </ScrollView>
   );
 }
