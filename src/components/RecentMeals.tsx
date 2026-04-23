@@ -11,7 +11,7 @@ export default function RecentMeals() {
     <View style={{ marginTop: 30 }}>
       <Text style={globalStyles.sectionTitle}>Recent Meals</Text>
       <MealItem
-        name="Chicked & Rice"
+        name="Chicken & Rice"
         calories={540}
         protein={45}
         carbs={50}
