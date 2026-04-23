@@ -36,3 +36,16 @@ export const addMeal = async (
 
   return newMeal;
 };
+
+export const deleteMeal = async (id: string): Promise<void> => {
+  const meals = await getMeals();
+
+  // Filter meals to exclude the meal with the id passed
+  const filteredMeals = meals.filter((meal) => meal.id !== id);
+
+  await AsyncStorage.setItem(MEALS_KEY, JSON.stringify(filteredMeals));
+};
+
+export const clearAllMeals = async (): Promise<void> => {
+  await AsyncStorage.removeItem(MEALS_KEY);
+};

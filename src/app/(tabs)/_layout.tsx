@@ -38,7 +38,7 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="meals"
         options={{
-          title: "Add Meals",
+          title: "All Meals",
           tabBarIcon: ({ size, color }) => (
             <Ionicons name="list" color={color} size={size} />
           ),
