@@ -1,19 +1,25 @@
-import { ScrollView, Text } from "react-native";
+import { ScrollView, StyleSheet, Text } from "react-native";
 
 // Components
 import HomeHeader from "@/components/HomeHeader";
 
 // Global styles
+import MacroGrid from "@/components/MacroGrid";
 import { globalStyles } from "@/styles/global";
-import { Link } from "expo-router";
 
 export default function Index() {
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>MacroZone</Text>
       <HomeHeader />
-
-      <Link href="/meals">Go to meals</Link>
+      <MacroGrid />
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  link: {
+    color: "#4f72c2",
+    margin: 20,
+  },
+});
