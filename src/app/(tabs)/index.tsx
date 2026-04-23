@@ -2,9 +2,10 @@ import { ScrollView, StyleSheet, Text } from "react-native";
 
 // Components
 import HomeHeader from "@/components/HomeHeader";
+import MacroGrid from "@/components/MacroGrid";
+import RecentMeals from "@/components/RecentMeals";
 
 // Global styles
-import MacroGrid from "@/components/MacroGrid";
 import { globalStyles } from "@/styles/global";
 
 export default function Index() {
@@ -13,6 +14,7 @@ export default function Index() {
       <Text style={globalStyles.title}>MacroZone</Text>
       <HomeHeader />
       <MacroGrid />
+      <RecentMeals />
     </ScrollView>
   );
 }
