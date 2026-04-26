@@ -6,10 +6,12 @@ import { ScrollView, StyleSheet, Text } from "react-native";
 import HomeHeader from "@/components/HomeHeader";
 import MacroGrid from "@/components/MacroGrid";
 import RecentMeals from "@/components/RecentMeals";
+import ShareButton from "@/components/ShareButton";
 
 // Global styles
 import { globalStyles } from "@/styles/global";
 
+// Services
 import { getMeals, Meal } from "@/storage/meals";
 
 export default function Index() {
@@ -32,6 +34,7 @@ export default function Index() {
   return (
     <ScrollView style={globalStyles.container}>
       <Text style={globalStyles.title}>MacroZone</Text>
+      <ShareButton meals={meals} />
       <HomeHeader />
       <MacroGrid meals={meals} />
       <RecentMeals meals={meals} onDelete={loadMeals} />
